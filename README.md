@@ -56,9 +56,3 @@ Open http://localhost:5173.
 6. Draw from either browser and verify updates are broadcast live.
 7. Restart the server and rejoin the room to check persisted history.
 
-## Important notes
-- This is a learning/resume project, not a security-audited production service.
-- Socket.IO events verify a valid JWT before joining rooms and check room membership before accepting draw/clear events.
-- This starter stores each mouse-move segment as an operation, which is straightforward but can grow large. For production, use stroke batching/snapshots and add rate/size limits.
-- JWT is stored in `localStorage` for a simple learning flow. For production, consider secure, HttpOnly cookies and stronger token/session management.
-- Use a unique, private JWT_SECRET and keep `.env` out of source control.
